@@ -1,0 +1,54 @@
+.WeekField{
+		upSkin:	Embed('images/CalendarIcon.png');
+		overSkin:	Embed('images/CalendarIcon.png');
+		downSkin:	Embed('images/CalendarIcon.png');
+		disabledSkin:	Embed('images/CalendarIcon.png');
+}
+
+.BannerCanvas
+	{
+	   borderStyle: solid;
+	   borderColor: #BABABA;
+	   borderThickness: 1;
+	   cornerRadius: 5;
+	   backgroundAlpha: 1;
+	   backgroundColor: #ffffff;
+	   dropShadowEnabled: true;
+	   shadowDirection: right;
+	   shadowDistance: 5;
+	}
+
+.prevMonthButton {
+	up-skin:Embed(source="kingnarestyle.swf", symbol="DateChooser_prevMonthUpSkin");
+	over-skin:Embed(source="kingnarestyle.swf", symbol="DateChooser_prevMonthUpSkin");
+	down-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_prevMonthUpSkin");
+}	
+.nextMonthMonthButton {
+	disabled-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextMonthDisabledSkin");
+	up-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextMonthUpSkin");
+	over-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextMonthUpSkin");
+	down-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextMonthUpSkin");
+}
+.nextYearButton{
+	disabled-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextYearDisabledSkin");
+	up-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextYearDownSkin");
+	over-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextYearOverSkin");
+	down-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_nextYearUpSkin");
+}	
+.preYearButton{
+	disabled-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_prevYearDisabledSkin");
+	up-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_prevYearUpSkin");
+	over-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_prevYearOverSkin");
+	down-skin: Embed(source="kingnarestyle.swf", symbol="DateChooser_prevYearDownSkin");
+}	
+
+.Label1
+{
+	 color: #00FF00;  
+	font-size:13;
+}
+.Label2
+{
+	 color: #757575;  
+	font-size:13;
+}

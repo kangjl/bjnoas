@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uiframe>
+	<icons url="IconsMod.swf"></icons>
+	<titleBar height="28" icon="title">
+		<logo>logoImage</logo>
+	</titleBar>
+	<homePage>
+        <item key="homepage" label="首页" icon="defaultIcon" clazz="com.nsn.noas.ui.main.view.mainui.homePage" parameters="label=首页" />
+    </homePage>
+	<!-- 任务栏配置 -->
+	<taskBar height="28" icon="taskbar">
+		<startButton label="Start" icon=""></startButton>
+	</taskBar>
+	
+	<startMenu height="360">
+		<menuItem key="0" label="WAP业务" icon="xitongIcon">
+			<menuItem key="001" label="小区WAP业务分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.cellrate.view.component.CellrateNew"  parameters="itemIndex=0" />
+			<menuItem key="002" label="用户级WAP业务统计分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.customer.view.component.CustomerNew"  parameters="itemIndex=2" />
+			<menuItem key="003" label="SP业务统计分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.spcustomer.view.component.SpcustomerNew"  parameters="itemIndex=3" />
+			<menuItem key="004" label="网站分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.internetcustomer.view.component.InternetcustomerNew"  parameters="itemIndex=4" />
+			<menuItem key="005" label="终端型号分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.terminaltype.view.component.TerminaltypeNew"  parameters="itemIndex=5" />
+			<menuItem key="006" label="手机终端分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.uacustomerNew.view.component.UAcustomerNew"  parameters="itemIndex=6" />
+			<menuItem key="007" label="用户号码导出" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.phoneextract.view.component.PhoneExtract"  parameters="itemIndex=7" />
+		    <menuItem key="008" label="未知网址TopN输出" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.undefineurl.view.component.UndefineUrl"  parameters="itemIndex=8" />
+			<menuItem key="009" label="终端平台分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.wapterminal.view.component.WapTerminal"  parameters="itemIndex=9" />
+			<menuItem key="010" label="WAP业务请求分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.waprequest.view.component.WapRequest"  parameters="itemIndex=10" />
+			<menuItem key="011" label="GIS主题图分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.gisMap.view.compotent.GisMap"  parameters="itemIndex=11" />
+			<menuItem key="012" label="区域应用喜好分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.areaanalysis.view.compotent.Areaanalysis"  parameters="itemIndex=12" />
+			<menuItem key="013" label="终端应用分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.terminalanalysis.view.compotent.TerminalAnalysis"  parameters="itemIndex=13" />
+			<menuItem key="014" label="互联网应用分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.appanalysis.view.compotent.Appanalysis"  parameters="itemIndex=14" />
+			<menuItem key="015" label="内容分类分析" icon="mapReportIcon" clazz="com.nsn.noas.ui.analysis.contenttype.view.compotent.Contenttype"  parameters="itemIndex=15" />
+		</menuItem>	
+		<menuItem key="1" label="彩信业务" icon="zhichengIcon">
+			<menuItem key="101" label="沉默用户统计" icon="tongyiIcon" clazz="com.nsn.noas.ui.analysis.silenceuser.view.component.SilenceUser"  parameters="itemIndex=0" />
+			<menuItem key="102" label="用户彩信发送次数分布分析" icon="daibanIcon" clazz="com.nsn.noas.ui.analysis.mmssendcount.view.component.MmsSendCount" parameters="itemIndex=1" />
+			<menuItem key="103" label="VIP用户成功率监测" icon="alarmIcon" clazz="com.nsn.noas.ui.analysis.mmsvipusersuccess.view.component.VipUserSuccess" parameters="itemIndex=2" />
+			<menuItem key="104" label="彩信接收简报" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.mmsreport.view.component.MmsReport" parameters="itemIndex=3" />
+			<menuItem key="105" label="MMS业务流量分析" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.mmsappanalysis.view.compotent.MmsAppanalysis" parameters="itemIndex=4" />
+			<menuItem key="106" label="MMS业务波动分析" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.mmsappfluctuate.view.compotent.MmsAppanalysisFluctuate" parameters="itemIndex=5" />
+			<menuItem key="107" label="重点SP业务分析" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.keynoteSp.view.component.keynoteSpNew" parameters="itemIndex=6" />
+			<menuItem key="108" label="MMS容量大小分析" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.mmssize.view.component.MmsSize" parameters="itemIndex=7" />
+			<menuItem key="109" label="MMS保存时长分析" icon="xingnengIcon" clazz="com.nsn.noas.ui.analysis.mmssavetime.view.component.MmsSaveTime" parameters="itemIndex=8" />
+		</menuItem>
+		
+		<menuItem key="2" label="短信业务" icon="chaxunIcon" clazz="" >
+			<menuItem key="201" label="短信业务量分析" icon="kehuIcon" clazz="com.nsn.noas.ui.analysis.smsBusinessMeasure.core.Main" />
+			<menuItem key="202" label="短信接通率分析" icon="yikaitongIcon" clazz="com.nsn.noas.ui.analysis.smsBusinessCallSuess.core.Mains" />
+			<menuItem key="203" label="短信业务量抖动分析" icon="yikaitongIcon" clazz="com.nsn.smsdt.SmsServiceAnalyseView" />
+			<menuItem key="204" label="短信接通率抖动分析" icon="yikaitongIcon" clazz="com.nsn.smsdt.SmsCompRateAnalyseView" />
+
+		</menuItem>
+		
+		<menuItem key="3" label="Congnos报表" icon="tongjiIcon" clazz="" >
+			<menuItem key="301" label="Cognos报表分析" icon="kehuIcon" clazz="com.nsn.noas.ui.analysis.cognos.component.Cognos" />
+		</menuItem>
+		
+		<menuItem key="4" label="数据配置管理" icon="xitongIcon" clazz="" >
+			<menuItem key="401" label="数据配置管理" icon="anquanIcon" clazz="com.nsn.noas.ui.dataconfig.DataconfigPage" />
+		</menuItem>
+		
+		<menuItem key="5" label="铁路切换链分析" icon="xitongIcon" clazz="" >
+			<menuItem key="504" label="铁路切换链分析" icon="xingnengshezhiIcon" clazz="com.nsn.noas.ui.analysis.railwaySwitch.view.component.RailwayPortal" />
+		</menuItem>
+		
+		<menuItem key="6" label="查询统计" icon="xitongIcon" clazz="" >
+			<menuItem key="601" label="寻呼黑洞分析" icon="xingnengshezhiIcon" clazz="com.nsn.noas.ui.analysis.BlackHoleStatistics.view.compotent.BlackHoleStatistics" />
+			<menuItem key="602" label="乒乓切换" icon="xingnengshezhiIcon" clazz="com.nsn.noas.ui.analysis.pingpong.view.component.PingpongView" />
+			<menuItem key="603" label="频繁切换" icon="xingnengshezhiIcon" clazz="com.nsn.noas.ui.analysis.Frequentswitch.view.component.FrequentView" />
+		</menuItem>
+	
+		<menuItem key="7" label="系统管理" icon="xitongIcon" clazz="" >
+			<menuItem key="701" label="用户管理" icon="xingnengshezhiIcon" clazz="com.nsn.energy.system.operator.view.operatorList" />
+			<menuItem key="702" label="角色管理" icon="xingnengshezhiIcon" clazz="com.nsn.energy.system.role.view.roleList" />
+			<menuItem key="703" label="权限管理" icon="xingnengshezhiIcon" clazz="com.nsn.energy.system.popedom.view.popedomList" />
+		</menuItem>
+		
+		<menuItem key="8" label="日志管理" icon="xitongIcon" clazz="" >
+			<menuItem key="801" label="日志查询" icon="xingnengshezhiIcon" clazz="com.nsn.energy.operaion.view.OperaionListView" />
+		</menuItem>
+
+	</startMenu>
+	
+</uiframe>

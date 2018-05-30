@@ -1,0 +1,1586 @@
+@namespace s "library://ns.adobe.com/flex/spark";  
+@namespace mx "http://www.adobe.com/2006/mxml"; 
+@namespace  "http://www.adobe.com/2006/mxml"; 
+/*@namespace mx "library://ns.adobe.com/flex/halo";  */
+global
+{
+   color: #4d4d4d;
+   fontFamily: Arial;
+   fontSize: 12px;
+	themeColor: #99CDFF;
+	modalTransparencyBlur: 0; 
+	modalTransparency: 0.9; 
+	modalTransparencyColor:white; 
+	modalTransparencyDuration: 10; 
+}
+
+/*
+//------------------------------
+//  AccordionHeader
+//------------------------------
+*/
+AccordionHeader
+{
+	disabledSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_disabledSkin");
+	downSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_downSkin");
+	overSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_overSkin");
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_disabledSkin");
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_downSkin");
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_overSkin");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_selectedSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="AccordionHeader_upSkin");
+	font-size:12;
+	font-weight:normal;
+	color:#3d3d90;
+	icon:Embed('images/arrow_state_blue_right.png');
+}
+
+.mainAccordionHeader
+{
+	disabledSkin: Embed('/images/menuimg_06.png');
+	downSkin: Embed('/images/menuimg_06.png');
+	overSkin: Embed('/images/menuimg_09.png');
+	selectedDisabledSkin: Embed('/images/menuimg_09.png');
+	selectedDownSkin: Embed('/images/menuimg_09.png');
+	selectedOverSkin: Embed('/images/menuimg_09.png');
+	selectedUpSkin: Embed('/images/menuimg_09.png');
+	upSkin: Embed('/images/menuimg_06.png');
+	font-size:12;
+	font-weight:normal;
+	color:#3d3d90;
+	padding-left:17;
+	border-alpha:0;
+	border-color:#ffffff;
+	icon:Embed('/images/context_menu_icon.png');
+}
+
+
+
+/*
+//------------------------------
+//  Button
+//------------------------------
+*/
+/*Button
+{
+	disabledSkin: Embed(source="yflexskin.swf", symbol="Button_disabledSkin1");
+	downSkin: Embed(source="yflexskin.swf", symbol="Button_downSkin1");
+	overSkin: Embed(source="yflexskin.swf", symbol="Button_overSkin1");
+	upSkin: Embed(source="yflexskin.swf", symbol="Button_upSkin1");
+	
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="Button_disabledSkin1");
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="Button_downSkin1");
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="Button_overSkin1");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="Button_upSkin1");
+	paddingTop: 2;
+	
+}*/
+
+.selectedButtonStyle
+{
+	color:#000000;
+}
+	
+
+/*
+//------------------------------
+//  primaryButton
+//------------------------------
+*/
+.primaryButton
+{
+	color: #ffffff;
+	textRollOverColor: #ffffff;
+	textSelectedColor: #ffffff;
+	disabledSkin: Embed(source="yflexskin.swf", symbol="primaryButton_disabledSkin");
+	downSkin: Embed(source="yflexskin.swf", symbol="primaryButton_downSkin");
+	overSkin: Embed(source="yflexskin.swf", symbol="primaryButton_overSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="primaryButton_upSkin");
+	paddingTop: 2;
+}
+
+/* 
+//------------------------------ 
+//  ButtonBar 
+//------------------------------ 
+*/ 
+
+ButtonBar 
+{ 
+	buttonStyleName: "buttonBarButton"; 
+	firstButtonStyleName: "firstButtonBarButton"; 
+	lastButtonStyleName: "lastButtonBarButton";
+}
+
+mx|Label s|Label
+{
+	font-size:12;
+}
+
+ToggleButtonBar 
+{ 
+	buttonStyleName: "buttonBarButton"; 
+	firstButtonStyleName: "firstButtonBarButton"; 
+	lastButtonStyleName: "lastButtonBarButton";
+}
+
+/* 
+//------------------------------ 
+//  ButtonBarButtons 
+//------------------------------ 
+*/ 
+
+.firstButtonBarButton 
+{ 
+	disabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstDisabledSkin"); 
+	downSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstDownSkin"); 
+	overSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstOverSkin"); 
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstSelectedDisabledSkin"); 
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstSelectedUpSkin"); 
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstSelectedUpSkin");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstSelectedUpSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_firstUpSkin"); 
+}
+
+.buttonBarButton 
+{ 
+	disabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonDisabledSkin"); 
+	downSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonDownSkin"); 
+	overSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonOverSkin"); 
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonSelectedDisabledSkin"); 
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonSelectedUpSkin"); 
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonSelectedUpSkin");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonSelectedUpSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_buttonUpSkin"); 
+}
+
+.lastButtonBarButton 
+{ 
+	disabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastDisabledSkin"); 
+	downSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastDownSkin"); 
+	overSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastOverSkin"); 
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastSelectedDisabledSkin"); 
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastSelectedUpSkin"); 
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastSelectedUpSkin");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastSelectedUpSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="ButtonBar_lastUpSkin"); 
+}
+
+/*
+//------------------------------
+//  CheckBox
+//------------------------------
+*/
+CheckBox
+{
+	disabledIcon: Embed(source="yflexskin.swf", symbol="CheckBox_disabledIcon");
+	downIcon: Embed(source="yflexskin.swf", symbol="CheckBox_downIcon");
+	overIcon: Embed(source="yflexskin.swf", symbol="CheckBox_overIcon");
+	selectedDisabledIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedDisabledIcon");
+	selectedDownIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedDownIcon");
+	selectedOverIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedOverIcon");
+	selectedUpIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedUpIcon");
+	upIcon: Embed(source="yflexskin.swf", symbol="CheckBox_upIcon");
+}		
+
+/*
+//------------------------------
+//  ColorPicker
+//------------------------------
+*/
+ColorPicker
+{
+	disabledSkin: Embed(source="yflexskin.swf", symbol="ColorPicker_disabledSkin");
+	downSkin: Embed(source="yflexskin.swf", symbol="ColorPicker_downSkin");
+	overSkin: Embed(source="yflexskin.swf", symbol="ColorPicker_overSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="ColorPicker_upSkin");
+}		
+
+
+	
+.myComboBoxDropDowns {
+   cornerRadius: 4;
+}
+
+/*
+//------------------------------
+//  CursorManager
+//------------------------------
+*/
+CursorManager
+{
+	busyCursor: Embed(source="yflexskin.swf", symbol="BusyCursor");
+	busyCursorBackground: Embed(source="yflexskin.swf",symbol="BusyCursor");
+}
+
+
+
+/*
+//------------------------------
+//  DateChooser
+//------------------------------
+*/
+DateChooser
+{
+	nextMonthDisabledSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextMonthDisabledSkin");
+	nextMonthDownSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextMonthDownSkin");
+	nextMonthOverSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextMonthOverSkin");
+	nextMonthUpSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextMonthUpSkin");
+	prevMonthDisabledSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevMonthDisabledSkin");
+	prevMonthDownSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevMonthDownSkin");
+	prevMonthOverSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevMonthOverSkin");
+	prevMonthUpSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevMonthUpSkin");
+	
+	nextYearDisabledSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextYearDisabledSkin");
+	nextYearDownSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextYearDownSkin");
+	nextYearOverSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextYearOverSkin");
+	nextYearUpSkin: Embed(source="yflexskin.swf", symbol="DateChooser_nextYearUpSkin");
+	prevYearDisabledSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevYearDisabledSkin");
+	prevYearDownSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevYearDownSkin");
+	prevYearOverSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevYearOverSkin");
+	prevYearUpSkin: Embed(source="yflexskin.swf", symbol="DateChooser_prevYearUpSkin");
+
+	todayIndicatorSkin: Embed(source="yflexskin.swf", symbol="DateChooser_todayIndicatorSkin");	
+	
+	rollOverIndicatorSkin: Embed(source="yflexskin.swf", symbol="DateChooser_rollOverIndicatorSkin");
+	selectionIndicatorSkin: Embed(source="yflexskin.swf", symbol="DateChooser_selectionIndicatorSkin");
+	
+}
+
+/*
+//------------------------------
+//  DateField
+//------------------------------
+*/
+DateField
+{
+	disabledSkin: Embed(source="yflexskin.swf",symbol="DateField_disabledSkin"); 
+	downSkin: Embed(source="yflexskin.swf",symbol="DateField_downSkin"); 
+	overSkin: Embed(source="yflexskin.swf",symbol="DateField_overSkin"); 
+	upSkin: Embed(source="yflexskin.swf",symbol="DateField_upSkin"); 
+	disabledColor:#cccccc;
+}
+
+.myDateField
+{
+	disabledSkin: Embed(source="yflexskin.swf",symbol="DateField_disabledSkin"); 
+	downSkin: Embed(source="yflexskin.swf",symbol="DateField_downSkin"); 
+	overSkin: Embed(source="yflexskin.swf",symbol="DateField_overSkin"); 
+	upSkin: Embed(source="yflexskin.swf",symbol="DateField_upSkin"); 
+}
+
+/*
+//------------------------------
+//  DividedBox
+//------------------------------
+*/
+DividedBox
+{
+	dividerSkin: Embed(source="yflexskin.swf",symbol="DividedBox_dividerSkin");
+	horizontalCursor: Embed(source="yflexskin.swf",symbol="DividedBox_horizontalCursor");
+	verticalCursor: Embed(source="yflexskin.swf",symbol="DividedBox_verticalCursor");
+}
+
+/*
+//------------------------------
+//  DragManager
+//------------------------------
+*/
+DragManager
+{
+	copyCursor: Embed(source="yflexskin.swf",symbol="DragManager_copyCursor");
+
+	defaultDragImageSkin: Embed(source="yflexskin.swf", symbol="DragManager_defaultDragImageSkin");
+
+	linkCursor: Embed(source="yflexskin.swf",symbol="DragManager_linkCursor");
+	moveCursor: Embed(source="yflexskin.swf",symbol="DragManager_moveCursor");
+	rejectCursor: Embed(source="yflexskin.swf",symbol="DragManager_rejectCursor");
+}
+
+/*
+//------------------------------
+//  FormItem
+//------------------------------
+*/
+FormItem
+{
+	indicatorSkin: Embed(source="yflexskin.swf",symbol="FormItem_indicatorSkin");  
+}
+
+/*
+//------------------------------
+//  Image
+//------------------------------
+*/
+Image
+{
+
+	brokenImageSkin: Embed(source="yflexskin.swf",symbol="Loader_brokenImageSkin");
+
+}
+
+/*
+//------------------------------
+//  LinkButton
+//------------------------------
+*/
+
+/*
+//------------------------------
+//  Loader
+//------------------------------
+*/
+Loader
+{
+	brokenImageSkin: Embed(source="yflexskin.swf",symbol="Loader_brokenImageSkin");
+
+}
+
+/*
+//------------------------------
+//  Menu
+//------------------------------
+*/
+Menu
+{
+	branchIcon: Embed(source="yflexskin.swf",symbol="Menu_branchIcon");
+	branchDisabledIcon: Embed(source="yflexskin.swf",symbol="Menu_branchDisabledIcon");
+	checkIcon: Embed(source="yflexskin.swf",symbol="Menu_checkIcon");
+	checkDisabledIcon: Embed(source="yflexskin.swf",symbol="Menu_checkDisabledIcon");
+	radioIcon: Embed(source="yflexskin.swf",symbol="Menu_radioIcon");
+	radioDisabledIcon: Embed(source="yflexskin.swf",symbol="Menu_radioDisabledIcon");
+	separatorSkin: Embed(source="yflexskin.swf",symbol="Menu_separatorSkin");
+}
+
+/*
+//------------------------------
+//  MenuBar
+//------------------------------
+*/
+MenuBar
+{
+
+	backgroundSkin: Embed(source="yflexskin.swf", symbol="MenuBar_backgroundSkin");
+	itemUpSkin: Embed(source="yflexskin.swf", symbol="MenuBar_itemUpSkin");
+	itemOverSkin: Embed(source="yflexskin.swf", symbol="MenuBar_itemOverSkin");
+	itemDownSkin: Embed(source="yflexskin.swf", symbol="MenuBar_itemDownSkin");
+
+}
+
+/*
+//------------------------------
+//  NumericStepper
+//------------------------------
+*/
+NumericStepper
+{
+
+	downArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="NumericStepperDownArrow_disabledSkin");
+	downArrowDownSkin: Embed(source="yflexskin.swf", symbol="NumericStepperDownArrow_downSkin");
+	downArrowOverSkin: Embed(source="yflexskin.swf", symbol="NumericStepperDownArrow_overSkin");
+	downArrowUpSkin: Embed(source="yflexskin.swf", symbol="NumericStepperDownArrow_upSkin");
+	upArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="NumericStepperUpArrow_disabledSkin");
+	upArrowDownSkin: Embed(source="yflexskin.swf", symbol="NumericStepperUpArrow_downSkin");
+	upArrowOverSkin: Embed(source="yflexskin.swf", symbol="NumericStepperUpArrow_overSkin");
+	upArrowUpSkin: Embed(source="yflexskin.swf", symbol="NumericStepperUpArrow_upSkin");
+
+}
+
+
+
+
+/*
+//------------------------------
+//  Panel ControlBar
+//------------------------------
+*/
+ControlBar
+{
+	borderSkin: Embed(source="yflexskin.swf", symbol="Panel_controlBarBackgroundSkin");
+}
+
+/*
+//------------------------------
+//  PopUpButton
+//------------------------------
+*/
+PopUpButton
+{
+	disabledSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_disabledSkin");
+	downSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_downLeftSkin");
+	overSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_overLeftSkin");	
+	popUpDownSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_downRightSkin");
+	popUpOverSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_overRightSkin");
+	upSkin: Embed(source="yflexskin.swf", symbol="PopUpButton_upSkin");
+}
+
+
+/*
+//------------------------------
+//  ProgressBar
+//------------------------------
+*/
+ProgressBar
+{
+
+	barSkin: Embed(source="yflexskin.swf", symbol="ProgressBarSkin");
+	indeterminateSkin: Embed(source="yflexskin.swf", symbol="ProgressIndeterminateSkin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="ProgressTrackSkin");
+
+}
+
+/*
+//------------------------------
+//  RadioButton
+//------------------------------
+*/
+RadioButton
+{
+
+	disabledIcon: Embed(source="yflexskin.swf", symbol="RadioButton_disabledIcon");
+	downIcon: Embed(source="yflexskin.swf", symbol="RadioButton_downIcon");
+	overIcon: Embed(source="yflexskin.swf", symbol="RadioButton_overIcon");
+	selectedDisabledIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_disabledIcon");
+	selectedDownIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_downIcon");
+	selectedOverIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_overIcon");
+	selectedUpIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_upIcon");
+	upIcon: Embed(source="yflexskin.swf", symbol="RadioButton_upIcon");
+
+}
+
+/*
+//------------------------------
+//  HorizontalScrollBar
+//------------------------------
+*/
+/*HScrollBar
+{
+	downArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowDownSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowOverSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowUpSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	thumbDownSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_downSkin");
+	thumbIcon: Embed(source="yflexskin.swf", symbol="ScrollBar_thumbIcon");
+	thumbOverSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_overSkin");
+	thumbUpSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_upSkin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="ScrollTrack_Skin");
+	upArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowDownSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowOverSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowUpSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+
+}*/
+
+
+/*
+//------------------------------
+//  VerticalScrollBar
+//------------------------------
+*/
+/*VScrollBar
+{
+
+	downArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowDownSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowOverSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	downArrowUpSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	thumbDownSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_downSkin");
+	thumbIcon: Embed(source="yflexskin.swf", symbol="ScrollBar_thumbIcon");
+	thumbOverSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_overSkin");
+	thumbUpSkin: Embed(source="yflexskin.swf", symbol="ScrollThumb_upSkin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="ScrollTrack_Skin");
+	upArrowDisabledSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowDownSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowOverSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+	upArrowUpSkin: Embed(source="yflexskin.swf", symbol="ScrollArrow");
+
+}*/
+
+/*
+//------------------------------
+//  Slider
+//------------------------------
+*/
+Slider
+{
+	thumbDisabledSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_disabledSkin");
+	thumbDownSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_downSkin");
+	thumbOverSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_overSkin");
+	thumbUpSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_upSkin");
+	trackHighlightSkin: Embed(source="yflexskin.swf", symbol="SliderHighlight_Skin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="SliderTrack_Skin");
+	thumbOffset: 8;
+}
+
+HSlider
+{
+	thumbDisabledSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_disabledSkin");
+	thumbDownSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_downSkin");
+	thumbOverSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_overSkin");
+	thumbUpSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_upSkin");
+	trackHighlightSkin: Embed(source="yflexskin.swf", symbol="SliderHighlight_Skin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="SliderTrack_Skin");
+}
+
+VSlider
+{
+	thumbDisabledSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_disabledSkin");
+	thumbDownSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_downSkin");
+	thumbOverSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_overSkin");
+	thumbUpSkin: Embed(source="yflexskin.swf", symbol="SliderThumb_upSkin");
+	trackHighlightSkin: Embed(source="yflexskin.swf", symbol="SliderHighlight_Skin");
+	trackSkin: Embed(source="yflexskin.swf", symbol="SliderTrack_Skin");
+}
+
+
+SuperTabNavigator{
+	firstButtonStyleName: "tabStyle";
+	tabStyleName: "tabStyle";
+	lastButtonStyleName: "tabStyle";
+	selectedTabTextStyleName: "selectedTabText";
+}
+/*
+//------------------------------
+//  Tab
+//------------------------------
+*/
+TabBar
+{
+	firstButtonStyleName: "tabStyle";
+	tabStyleName: "tabStyle";
+	lastButtonStyleName: "tabStyle";
+	selectedTabTextStyleName: "selectedTabText";
+}
+
+.tabStyle {
+	disabledSkin: Embed(source="yflexskin.swf", symbol="Tab_disabledSkin1");
+	downSkin: Embed(source="yflexskin.swf", symbol="Tab_downSkin1");
+	overSkin: Embed(source="yflexskin.swf", symbol="Tab_overSkin1");
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="Tab_disabledSkin1");
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin1");
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin1");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin1");
+	upSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin1");
+	
+	color: #3f3f3f;
+	textRollOverColor: #2e2e2e;
+	textSelectedColor:#2e2e2e;
+	disabledColor:#111111;
+}
+.selectedTabText 
+{
+	color: #000000;
+	textRollOverColor: #000000;
+	textSelectedColor:#000000;
+	disabledColor:#111111;
+}
+
+/*
+//------------------------------
+//  TabNavigator
+//------------------------------
+*/
+TabNavigator
+{
+	borderColor: #a3a3a3;
+	borderStyle:solid;
+	borderThickness:1;
+	backgroundColor:#ffffff;
+	fontWeight:normal;
+	color: #2e2e2e;
+	textRollOverColor: #666666;
+	textSelectedColor:#444444;
+	disabledColor:#111111;
+	paddingTop: 0;
+}
+
+/*
+//------------------------------
+//  ToolTip
+//------------------------------
+*/
+ToolTip
+{
+
+	borderSkin: Embed(source="yflexskin.swf", symbol="ToolTip_borderSkin");
+	fontSize:12;
+
+}
+
+Title {
+	titleBackgroundSkin: Embed(source="yflexskin.swf", symbol="Panel_titleBackgroundSkin1");
+	titleStyleName: "panelTitle";
+}
+/*
+//------------------------------
+//  Tree
+//------------------------------
+*/
+Tree
+{
+	defaultLeafIcon: Embed(source="yflexskin.swf",symbol="Tree_defaultLeafIcon");
+	disclosureClosedIcon: Embed(source="yflexskin.swf",symbol="Tree_disclosureClosedIcon");
+	disclosureOpenIcon: Embed(source="yflexskin.swf",symbol="Tree_disclosureOpenIcon");
+	folderClosedIcon: Embed(source="yflexskin.swf",symbol="Tree_folderClosedIcon");
+	folderOpenIcon: Embed(source="yflexskin.swf",symbol="Tree_folderOpenIcon");
+}
+
+
+
+
+
+/*
+//------------------------------
+//  Application
+//------------------------------
+backgroundImage: Embed(source="yflexskin.swf",symbol="BackgroundImage");
+*/
+Application
+{
+	
+	backgroundGradientAlphas: 1.0, 1.0;
+	backgroundGradientColors: #FFFFFF, #FFFFFF;
+	fontSize: 12;
+    fontFamily: "宋体"; 
+}
+
+
+
+/*
+//------------------------------
+//  CheckBox
+//------------------------------
+*/
+CheckBox
+{
+	disabledIcon: Embed(source="yflexskin.swf", symbol="CheckBox_disabledIcon");
+	downIcon: Embed(source="yflexskin.swf", symbol="CheckBox_downIcon");
+	overIcon: Embed(source="yflexskin.swf", symbol="CheckBox_overIcon");
+	selectedDisabledIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedDisabledIcon");
+	selectedDownIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedDownIcon");
+	selectedOverIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedOverIcon");
+	selectedUpIcon: Embed(source="yflexskin.swf", symbol="CheckBox_selectedUpIcon");
+	upIcon: Embed(source="yflexskin.swf", symbol="CheckBox_upIcon");
+}		
+
+
+
+/*
+//------------------------------
+//  ComboBox
+//------------------------------
+*/
+ComboBox
+{
+	disabledSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_disabledSkin1");
+	downSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_downSkin1");
+	editableDisabledSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_editableDisabledSkin1");
+	editableDownSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_editableDownSkin1");
+	editableOverSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_editableOverSkin1");
+	editableUpSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_editableUpSkin1");
+	overSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_overSkin1");
+	upSkin: Embed(source="yflexskin.swf", symbol="ComboBoxArrow_upSkin1");
+	vertical-align: middle;
+}
+	
+
+
+
+/*
+//------------------------------
+//  DataGrid
+//------------------------------
+*/
+DataGrid
+{
+	color:#515151;
+	header-background-skin: Embed(source="yflexskin.swf", symbol="DataGrid_headBackgroundSkin");
+	rollOverColor: #DBEBF8;	
+	borderStyle: solid;
+	borderThickness:1;
+	borderColor: #B2BFCF;
+	alternatingItemColors: #F6f9fe, #ffffff;
+	disabledColor: #515151;
+	
+	verticalGridLines: true;
+	horizontalGridLines: true;
+    horizontalGridLineColor: #B2BFCF;
+    verticalGridLineColor: #B2BFCF;
+    headerStyleName: "dataGridHeader";
+
+}
+/*
+//------------------------------
+//  DataGridHeader
+//------------------------------
+*/
+.dataGridHeader
+{
+	color:#515151;
+	textRollOverColor:#ffffff;
+	textSelectedColor:#ffffff;
+	text-align:center;
+}
+
+
+
+/*
+//------------------------------
+//  TextInput
+//------------------------------
+*/
+TextInput
+{
+	borderStyle: none;
+	backgroundAlpha: 1.0;
+	color: #515151;
+	borderSkin: Embed(source="yflexskin.swf", symbol="TextInput_borderSkin");
+}
+
+
+
+/*
+//------------------------------
+//  Panel
+//------------------------------
+*/
+	/*
+	Removed due to incompatibilities with Flex 3
+	borderSkin: Embed(source="yflexskin.swf", symbol="Panel_borderSkin");
+	*/	
+
+/*Panel
+{
+	closeButtonDisabledSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonDisabledSkin");
+	closeButtonDownSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonDownSkin");
+	closeButtonOverSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonOverSkin");
+	closeButtonUpSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonUpSkin");
+	
+	headerHeight: 26;
+	roundedBottomCorners: true;
+	cornerRadius: 2;
+	borderColor: #E3E0F8;
+	borderThicknessTop: -1;
+	borderThicknessBottom: 0;
+	borderThicknessLeft: 0;
+	borderThicknessRight: 0;
+	
+	shadowDistance: 1;
+	dropShadowEnabled: false;
+	borderAlpha: 1.0;
+	titleBackgroundSkin: Embed(source="yflexskin.swf", symbol="Panel_titleBackgroundSkin1");
+	backgroundImage: Embed(source="yflexskin.swf", symbol="Panel_backgroundImage1");
+	backgroundSize: "100%";
+	titleStyleName: "panelTitle";
+	paddingBottom : 2;
+	paddingTop:2;
+	paddingLeft:2;
+	paddingRight:2;
+	
+}*/
+
+.panelTitle {
+    fontSize: 12;
+	color:#545084;
+	font-weight:bold;
+}
+
+.portalPanel
+{
+	closeButtonDisabledSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonDisabledSkin");
+	closeButtonDownSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonDownSkin");
+	closeButtonOverSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonOverSkin");
+	closeButtonUpSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonUpSkin");
+	/*
+	Removed due to incompatibilities with Flex 3
+	borderSkin: Embed(source="yflexskin.swf", symbol="Panel_borderSkin");
+	*/	
+	
+	headerHeight: 21.3;
+	roundedBottomCorners: true;
+	cornerRadius: 2;
+	borderColor: #E3E0F8;
+	borderThicknessTop: -1;
+	borderThicknessBottom: 0;
+	borderThicknessLeft: 0;
+	borderThicknessRight: 0;
+	
+	shadowDistance: 1;
+	dropShadowEnabled: false;
+	borderAlpha: 1.0;
+	titleBackgroundSkin: Embed(source="yflexskin.swf", symbol="Panel_titleBackgroundSkin3");
+	backgroundImage: Embed(source="yflexskin.swf", symbol="Panel_backgroundImage2");
+	backgroundSize: "100%";
+	titleStyleName: "portalPanelTitle";
+	paddingBottom : 5;
+	paddingTop:5;
+	paddingLeft:5;
+	paddingRight:5;
+	
+}
+
+.portalPanelTitle {
+    fontSize: 12;
+	color:#000000;
+	font-weight:bold;
+}
+
+.myHSlider
+{
+	trackSkin: Embed(source="kingnarestyle.swf", symbol="MySliderTrack_Skin");
+	showTrackHighlight: true;
+	thumbUpSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_upSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbOverSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_overSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDownSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_downSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDisabledSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_disabledSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	trackHighlightSkin: Embed(source="kingnarestyle.swf", symbol="MySliderHighlight_Skin");
+	dataTipOffset: 5;
+}
+
+.myHSliderHideBar
+{
+	trackSkin: Embed(source="kingnarestyle.swf", symbol="MySliderTrack_Skin");
+	showTrackHighlight: true;
+	thumbUpSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_upSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbOverSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_overSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDownSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_downSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDisabledSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_disabledSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	trackHighlightSkin: Embed(source="kingnarestyle.swf", symbol="MySliderHighlight_hide_Skin");
+	dataTipOffset: 5;
+}
+
+
+/* Panel with ControlBar. */
+.PanelWithControlBar
+{
+	backgroundImage: Embed(source="kingnarestyle.swf", symbol="Panel_SpBackgroundImage");
+}
+
+.myVSlider
+{
+	trackSkin: Embed(source="kingnarestyle.swf", symbol="MySliderTrack_Skin");
+	showTrackHighlight: true;
+	thumbUpSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_upSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbOverSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_overSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDownSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_downSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	thumbDisabledSkin: Embed(source="kingnarestyle.swf", symbol="SliderThumb_disabledSkin",scaleGridBottom="10",scaleGridLeft="1",scaleGridTop="1",scaleGridRight="10");
+	trackHighlightSkin: Embed(source="kingnarestyle.swf", symbol="MySliderHighlight_Skin");
+	dataTipOffset: 5;
+}
+
+/*
+//------------------------------
+//  bg
+//------------------------------
+*/
+.bgSkin
+{
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="ApplicationControlBar_BackgroundSkin");
+}
+.bgGreenSkin
+{
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="GreenBackgroundSkin");
+}
+.bgRedSkin
+{
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="RedBackgroundSkin");
+}
+.textBorder
+{
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="TextInput_borderSkin"); 
+}
+
+/* AIR Part Test*/
+Window
+{
+	 statusBarBackgroundColor:#C0C0C0;
+}
+.titleImg{
+	background-image:Embed(source="images/titlesty.png");
+}
+
+.searchButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="SearchButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="SearchButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="SearchButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="SearchButton_disabledSkin");
+
+}
+
+.chartButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="ChartButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="ChartButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="ChartButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="ChartButton_disabledSkin");
+ 
+}
+.myCanvas{
+	borderStyle:solid; 
+	borderColor:#444444; 
+	backgroundColor:#272727;
+}
+
+.refreshButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="RefreshButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="RefreshButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="RefreshButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="RefreshButton_disabledSkin");
+
+}
+.zoomButton{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="ZoomButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="ZoomButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="ZoomButton_overSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="ZoomButton_upSkin");
+}
+
+.exportButton{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="ExportButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="ExportButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="ExportButton_overSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="ExportButton_upSkin");
+}
+
+/*线图按钮*/
+.lineChartButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="LineButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="LineButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="LineButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="LineButton_disabledSkin");
+
+}
+
+/*柱图按钮*/
+.columnChartButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="ColumnButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="ColumnButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="ColumnButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="ColumnButton_disabledSkin");
+}
+
+/*分页GO按钮*/
+.goButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="GoButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="GoButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="GoButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="GoButton_disabledSkin");
+}
+
+/*由坏到好按钮*/
+.badToGoodButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="BadToGoodButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="BadToGoodButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="BadToGoodButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="BadToGoodButton_disabledSkin");
+}
+
+/*由好到坏按钮*/
+.goodToBadButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="GoodToBadButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="GoodToBadButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="GoodToBadButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="GoodToBadButton_disabledSkin");
+}
+
+/*选择按钮*/
+.selectButton
+{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="SelectButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="SelectButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="SelectButton_downSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="SelectButton_disabledSkin");
+}
+
+.pageButtonNext{
+	upSkin: Embed(source="../images/page_btn_07.png");
+	overSkin: Embed(source="../images/page_btn_07_over.png");
+	downSkin: Embed(source="../images/page_btn_07.png");
+	disabledSkin: Embed(source="../images/page_btn_17.png");
+}
+.pageButtonBack{
+	upSkin: Embed(source="../images/page_btn_16.png");
+	overSkin: Embed(source="../images/page_btn_16_over.png");
+	downSkin: Embed(source="../images/page_btn_16.png");
+	disabledSkin: Embed(source="../images/page_btn_05.png");
+}
+.pageButtonFrist{
+	upSkin: Embed(source="../images/page_btn_15.png");
+	overSkin: Embed(source="../images/page_btn_15_over.png");
+	downSkin: Embed(source="../images/page_btn_15.png");
+	disabledSkin: Embed(source="../images/page_btn_03.png");
+}
+.pageButtonLast{
+	upSkin: Embed(source="../images/page_btn_09.png");
+	overSkin: Embed(source="../images/page_btn_09_over.png");
+	downSkin: Embed(source="../images/page_btn_09.png");
+	disabledSkin: Embed(source="../images/page_btn_18.png");
+}
+
+
+.menuShowBtn{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="menuShow");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="menuShow");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="menuShow");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="menuShow");
+}
+.menuHideBtn{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="menuHide");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="menuHide");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="menuHide");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="menuHide");
+}
+.menuListShowBtn{
+	upSkin: Embed("/images/menuimg_15.png");
+	overSkin: Embed("/images/menuimg_18.png");
+	downSkin: Embed("/images/menuimg_15.png");
+	disabledSkin: Embed("/images/menuimg_15.png");
+}
+
+.exitButton{
+	upSkin: Embed("/images/exit_up.png");
+	overSkin: Embed("/images/exit_over.png");
+	downSkin: Embed("/images/exit_over.png");
+	disabledSkin: Embed("/images/exit_over.png");
+}
+.errorTip
+{    
+     fontSize: 12;
+     bordercolor:#ff0000;
+     backgroud:#ff0000;
+     backgroudcolor:#ff0000;
+}
+.linkLabel{
+	color:#9c52ad;
+	textDecoration:underline;
+}
+@font-face
+{
+	font-family:timefont;
+	src:url("digifaw.ttf");
+}
+.timeFontStyle
+{
+	font-family:timefont;
+	font-size:16;
+	color: #00FF00;
+}
+.searchTextInput{
+	borderStyle: none;
+	backgroundAlpha: 1.0;
+	borderColor: #B7BABC;
+	color: #FFFFFF;
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="SearchTextInput_borderSkin"); 
+	icon:Embed(source="kingnarestyle.swf", symbol="Button_downSkin");
+	paddingLeft:22;
+}
+
+.loginTextInput{
+	borderStyle: none;
+	backgroundAlpha: 0;
+	color: #666666;
+	padding-left: 5;
+	padding-top: 4;
+	font-size:14;
+	borderSkin: Embed(source="kingnarestyle.swf", symbol="LoginTextInput"); 
+}
+.loginButton{
+	upSkin: Embed(source="kingnarestyle.swf", symbol="LoginButton_upSkin");
+	overSkin: Embed(source="kingnarestyle.swf", symbol="LoginButton_overSkin");
+	downSkin: Embed(source="kingnarestyle.swf", symbol="LoginButton_overSkin");
+	disabledSkin: Embed(source="kingnarestyle.swf", symbol="LoginButton_overSkin");
+}
+
+/*
+//------------------------------
+//  superPanel
+//------------------------------
+*/
+.superPanel {
+	headerHeight: 26;
+	roundedBottomCorners: true;
+	borderThickness:0.1;
+	dropShadowEnabled: false;
+	borderAlpha: 0.3;
+	border-color:#66ccff;
+}
+.mypanelTitle {
+	fontFamily: Arial;
+	fontSize: 12;
+	fontWeight: bold;
+	color:#66ccff;
+}
+.closeBtn {
+	upSkin:        Embed('/images/closeButton.png');
+	overSkin:      Embed('/images/closeButton.png');
+	downSkin:      Embed('/images/closeButton.png');
+	disabledSkin:  Embed('/images/closeButton.png');
+}
+.decreaseBtn {
+	upSkin:        Embed('/images/decreaseButton.png');
+	overSkin:      Embed('/images/decreaseButton.png');
+	downSkin:      Embed('/images/decreaseButton.png');
+	disabledSkin:  Embed('/images/decreaseButton.png');
+}
+.minimizeBtn {
+	upSkin:        Embed('/images/minimizeButton.png');
+	overSkin:      Embed('/images/minimizeButton.png');
+	downSkin:      Embed('/images/minimizeButton.png');
+	disabledSkin:  Embed('/images/minimizeButton.png');
+}
+.resizeHndlr {
+	upSkin:        Embed('/images/resizeHandler.png');
+	overSkin:      Embed('/images/resizeHandler.png');
+	downSkin:      Embed('/images/resizeHandler.png');
+	disabledSkin:  Embed('/images/resizeHandler.png');
+}
+
+/* End */
+
+/*
+//------------------------------
+//  CustomTab
+//------------------------------
+*/
+CustomTabBar
+{
+	firstButtonStyleName: "tabStyle1";
+	tabStyleName: "tabStyle1";
+	lastButtonStyleName: "tabStyle1";
+	selectedTabTextStyleName: "selectedTabText1";
+}
+
+.tabStyle1 {
+	disabledSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin2");
+	downSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin2");
+	overSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin2");
+	selectedDisabledSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin2");
+	selectedDownSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin2");
+	selectedOverSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin2");
+	selectedUpSkin: Embed(source="yflexskin.swf", symbol="TabSelected_upSkin2");
+	upSkin: Embed(source="yflexskin.swf", symbol="Tab_upSkin2");
+	
+	color: #3f3f3f;
+	textRollOverColor: #706865;
+	textSelectedColor:#2e2e2e;
+	disabledColor:#111111;
+}
+.selectedTabText1 
+{
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor:#000000;
+	disabledColor:#111111;
+}
+
+
+.dataGridTitleBar{
+	background-image:Embed(source="yflexskin.swf", symbol="GridBar");
+}
+.kpiUp{
+	background-image:Embed(source="ETLStyle.swf", symbol="Kpi_upSkin");
+}
+.kpiDown{
+	background-image:Embed(source="ETLStyle.swf", symbol="Kpi_downSkin");
+}
+.backButton{
+	upSkin:        Embed('/images/jt_03.png');
+	overSkin:      Embed('/images/jt_03.png');
+	downSkin:      Embed('/images/jt_03.png');
+	disabledSkin:  Embed('/images/jt_03.png');
+}
+.nextButton{
+	upSkin:        Embed('/images/jt_05.png');
+	overSkin:      Embed('/images/jt_05.png');
+	downSkin:      Embed('/images/jt_05.png');
+	disabledSkin:  Embed('/images/jt_05.png');
+}
+.application{
+	border-skin:Embed(source="yflexskin.swf", symbol="GridBar");
+}
+
+.viewStack{
+    border-sides:left,bottom,right,top;
+    border-style:solid;
+    borderThickness:1;
+}
+.closeButton{
+	disabledSkin : Embed(source="yflexskin.swf",symbol="Panel_closeButtonDisabledSkin");
+	downSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonDownSkin");
+	overSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonOverSkin");
+	upSkin: Embed(source="yflexskin.swf",symbol="Panel_closeButtonUpSkin");
+}
+.leftRadioButton
+{
+	disabledIcon: Embed(source="yflexskin.swf", symbol="RadioButton_left_upSkin");
+	downIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_left_upSkin");
+	overIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_left_upSkin");
+	selectedDisabledIcon: Embed(source="yflexskin.swf", symbol="RadioButton_left_upSkin");
+	selectedDownIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_left_upSkin");
+	selectedOverIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_left_upSkin");
+	selectedUpIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_left_upSkin");
+	upIcon: Embed(source="yflexskin.swf", symbol="RadioButton_left_upSkin");
+}
+
+.rightRadioButton
+{
+	disabledIcon: Embed(source="yflexskin.swf", symbol="RadioButton_right_upSkin");
+	downIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_right_upSkin");
+	overIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_right_upSkin");
+	selectedDisabledIcon: Embed(source="yflexskin.swf", symbol="RadioButton_right_upSkin");
+	selectedDownIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_right_upSkin");
+	selectedOverIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_right_upSkin");
+	selectedUpIcon: Embed(source="yflexskin.swf", symbol="RadioButtonSelected_right_upSkin");
+	upIcon: Embed(source="yflexskin.swf", symbol="RadioButton_right_upSkin");
+}
+
+/*
+//------------------------------
+//  SearchTextInput
+//------------------------------
+*/
+.searchTextInput
+{
+	borderStyle: none;
+	backgroundAlpha: 1.0;
+	color: #515151;
+	borderSkin: Embed(source="yflexskin.swf", symbol="SearchInputText_up_skin"); 
+	
+}
+
+/*
+//------------------------------
+//  Alert
+//------------------------------
+*/
+Alert{
+	background-color:#ffffff;
+	color:#000000;
+}
+
+/*
+//------------------------------
+//  系统管理--当前用户背景
+//------------------------------
+*/
+.currentUserTextInput{
+	borderStyle: none;
+	backgroundAlpha: 1.0;
+	color: #505050;
+	borderSkin: Embed(source="yflexskin.swf", symbol="SysManage_userLabel_bg");
+	padding-left:10;
+	padding-top:2;
+}
+
+/*
+//------------------------------
+//  系统管理--返回首页按钮
+//------------------------------
+*/
+.goToHomeButton{
+	upSkin:        Embed(source="yflexskin.swf", symbol="SysManageButton_home_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="SysManageButton_home_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="SysManageButton_home_upSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="SysManageButton_home_upSkin");
+}
+
+/*
+//------------------------------
+//  系统管理--退出按钮
+//------------------------------
+*/
+.outBotton{
+	upSkin:        Embed(source="yflexskin.swf", symbol="SysManageButton_out_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="SysManageButton_out_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="SysManageButton_out_upSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="SysManageButton_out_upSkin");
+}
+
+/*
+//------------------------------
+//  系统管理--菜单列表
+//------------------------------
+*/
+.menuListItem{
+	paddingLeft:10;
+	background-color:#f0f0f0;
+}
+
+.statusButton{
+	disabled-color:#6751CE;
+}
+
+/*
+//------------------------------
+//  选择按钮
+//------------------------------
+*/
+.selectBotton{
+	upSkin:        Embed(source="yflexskin.swf", symbol="SelectButton_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="SelectButton_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="SelectButton_upSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="SelectButton_disabledSkin");
+}
+
+/*
+//------------------------------
+//  元数据--添加按钮
+//------------------------------
+*/
+.buttonAdd{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonAdd_upSkin1");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonAdd_overSkin1");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonAdd_upSkin1");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonAdd_upSkin1");
+}
+
+/*
+//------------------------------
+//  元数据--修改按钮
+//------------------------------
+*/
+.buttonModify{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonModify_upSkin1");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonModify_overSkin1");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonModify_upSkin1");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonModify_upSkin1");
+}
+
+/*
+//------------------------------
+//  元数据--删除按钮
+//------------------------------
+*/
+.buttonDelete{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonDelete_upSkin1");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonDelete_overSkin1");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonDelete_upSkin1");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonDelete_upSkin1");
+}
+
+/*
+//------------------------------
+//  元数据--刷新按钮
+//------------------------------
+*/
+.buttonRefresh{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonRefresh_upSkin1");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonRefresh_overSkin1");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonRefresh_upSkin1");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonRefresh_upSkin1");
+}
+
+/*
+//------------------------------
+//  元数据--返回按钮
+//------------------------------
+*/
+.buttonBack{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonBack_upSkin1");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonBack_overSkin1");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonBack_upSkin1");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonBack_upSkin1");
+}
+
+/*
+//------------------------------
+//  元数据--属性编辑
+//------------------------------
+*/
+.buttonAttributeEdit{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	icon : Embed(source="yflexskin.swf", symbol="ButtonAttributeEdit_upSkin");
+	color:#4c41a0;
+}
+/*
+//------------------------------
+//  元数据--字段编辑
+//------------------------------
+*/
+.buttonFieldEdit{
+	upSkin:        Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	overSkin:      Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	downSkin:      Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="ButtonEdit_background");
+	icon : Embed(source="yflexskin.swf", symbol="ButtonFieldEdit_upSkin");
+	color:#4c41a0;
+}
+
+/*
+//------------------------------
+//  预测 BEGIN
+//------------------------------
+*/
+
+/*主页面按钮*/
+.forecastBtnMian{
+	upSkin:        Embed(source="yflexskin.swf", symbol="Forecast_buttonMain_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonMain_upSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonMain_upSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="Forecast_buttonMain_disabledSkin");
+	color:#FFFFFF;
+}
+
+/*状态标签*/
+.forecastLabel{
+	background-image:Embed(source="yflexskin.swf", symbol="Forecast_statusLabel_backgroundImage");
+}
+
+.forecastApplicationControlBar{
+	borderSkin:Embed(source="yflexskin.swf", symbol="Forecast_ButtonBar_background");
+	paddingLeft:10;
+	paddingTop:8;
+	horizontal-gap:10;
+}
+
+/*新建按钮*/
+.forecastBtnAdd{
+	upSkin:        Embed(source="yflexskin.swf", symbol="Forecast_buttonAdd_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonAdd_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonAdd_overSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="Forecast_buttonAdd_disabledSkin");
+}
+
+
+
+/*后退按钮*/
+.forecastBtnBack{
+	upSkin:        Embed(source="yflexskin.swf", symbol="Forecast_buttonBack_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonBack_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonBack_overSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="Forecast_buttonBack_disabledSkin");
+}
+
+/*前进按钮*/
+.forecastBtnForwart{
+	upSkin:        Embed(source="yflexskin.swf", symbol="Forecast_buttonForward_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonForward_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonForward_overSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="Forecast_buttonForward_disabledSkin");
+}
+
+/*导出按钮*/
+.forecastBtnExport{
+	upSkin:        Embed(source="yflexskin.swf", symbol="Forecast_buttonExport_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonExport_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="Forecast_buttonExport_overSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="Forecast_buttonExport_disabledSkin");
+}
+
+/*
+//------------------------------
+//  预测 END
+//------------------------------
+*/
+
+/*
+//------------------------------
+//  元数据管理菜单背景
+//------------------------------
+*/
+.elementDataMenuBg{
+	border-skin : Embed('/images/elementData_menu_bg.jpg');
+}
+
+/*
+//------------------------------
+//  门户集成查询条件页面
+//------------------------------
+*/
+.allAreaRightArrowButton{
+	upSkin:        Embed('/images/arrow_right.gif');
+	overSkin:      Embed('/images/arrow_right_over.gif');
+	downSkin:      Embed('/images/arrow_right.gif');
+	disabledSkin:  Embed('/images/arrow_right.gif');
+}
+.allAreaLeftArrowButton{
+	upSkin:        Embed('/images/arrow_left.gif');
+	overSkin:      Embed('/images/arrow_left_over.gif');
+	downSkin:      Embed('/images/arrow_left.gif');
+	disabledSkin:  Embed('/images/arrow_left.gif');
+}
+
+.areaRightArrowButton{
+	upSkin:        Embed('/images/arrow_right1.gif');
+	overSkin:      Embed('/images/arrow_right_over1.gif');
+	downSkin:      Embed('/images/arrow_right1.gif');
+	disabledSkin:  Embed('/images/arrow_right1.gif');
+}
+.areaLeftArrowButton{
+	upSkin:        Embed('/images/arrow_left1.gif');
+	overSkin:      Embed('/images/arrow_left_over1.gif');
+	downSkin:      Embed('/images/arrow_left1.gif');
+	disabledSkin:  Embed('/images/arrow_left1.gif');
+}
+
+
+.linkButtonMoveLeft{
+	upSkin:        Embed(source="yflexskin.swf", symbol="LinkButton_moveLeft_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="LinkButton_moveLeft_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="LinkButton_moveLeft_downSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="LinkButton_moveLeft_disabledSkin");
+}
+
+.linkButtonMoveRight{
+	upSkin:        Embed(source="yflexskin.swf", symbol="LinkButton_moveRight_upSkin");
+	overSkin:      Embed(source="yflexskin.swf", symbol="LinkButton_moveRight_overSkin");
+	downSkin:      Embed(source="yflexskin.swf", symbol="LinkButton_moveRight_downSkin");
+	disabledSkin:  Embed(source="yflexskin.swf", symbol="LinkButton_moveRight_disabledSkin");
+}
+
+.border{
+	borderStyle:solid;
+	borderThickness:1;
+}
+.title{
+	background-color:#e1ddff;
+	padding-left:5;
+}
+.titleFont{
+	color:#FF7C1E;
+}
+
+
+/*自定义Grid*/
+.gridItemLabelStyle{
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+}
+
+/*.kpiTrendButton{
+	upSkin:        Embed('/images/path.png');
+	overSkin:      Embed('/images/path.png');
+	downSkin:      Embed('/images/path.png');
+	disabledSkin:  Embed('/images/path.png');
+}*/
+
+.titleBorderBoxStyle{
+	border-color: #B2BFCF;
+	drop-shadow-enabled: true;
+	drop-shadow-color: #B2BFCF;
+	shadow-color: #B2BFCF;
+	shadow-distance: 3;
+	shadow-direction: right;
+}
+
+SuperTab{
+	tab-close-button-style-name:tabCloseButtonStyleName;
+}
+
+.tabCloseButtonStyleName {
+	upSkin: Embed(source="assets.swf", symbol="firefox_close_up"); 
+	over-skin:Embed(source="assets.swf", symbol="firefox_close_over");
+	down-skin: Embed(source="assets.swf", symbol="firefox_close_down"); 
+} 
+

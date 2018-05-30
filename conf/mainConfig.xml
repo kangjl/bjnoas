@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- image(iframe--true/false   tabpage---true/false) <target title="Google" source="http://www.google.cn"/>-->
+<data>
+	<mainType title="sbap"/>
+	<!--<server value="http://10.238.183.87"/>-->
+	<!--<server value="http://noas.xj.cmcc"/>-->
+	<server value="http://localhost:8080/UI_java"/>
+	<defaultMapColor value="0xD0D0FF"/>
+	<cognosServer value="http://192.168.0.43:9300"/>
+		
+</data>
